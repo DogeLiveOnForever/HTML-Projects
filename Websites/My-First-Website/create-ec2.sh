@@ -1,6 +1,7 @@
 #!/bin/bash
-
-DOC_IMG_NAME=max-html-image:v1
+# This is simple automation script to create and start docker image for my project.
+# additional commands could be added to export and propagade docker image to AWS s3 bucket and use it in userdata script for ec2 instance startup. 
+DOC_IMG_NAME=max-html:v1
 DOC_IMG_TAR=${DOC_IMG_NAME}.tar
 ACCESS_PORT=8080
 LOG_FILE=${DOC_IMG_NAME}.log
