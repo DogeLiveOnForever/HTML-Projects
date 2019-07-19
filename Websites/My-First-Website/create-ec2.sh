@@ -16,11 +16,11 @@ echo "*** Removing existing $DOC_IMG_NAME docker image ..."
 echo "*** Building $DOC_IMG_NAME docker image ..."
 ( docker build -t $DOC_IMG_NAME . ) >> $LOG_FILE
 
-echo "*** Saving $DOC_IMG_NAME as DOC_IMG_TAR ..."
-( docker save --output max-html-image.tar max-html-image:v1 ) >> $LOG_FILE
+#echo "*** Saving $DOC_IMG_NAME as $DOC_IMG_TAR ..."
+#( docker save --output $DOC_IMG_TAR max-html-image:v1 ) >> $LOG_FILE
 
 echo "*** Starting container for  $DOC_IMG_NAME ..."
 ( docker run -d -p ${ACCESS_PORT}:80 $DOC_IMG_NAME ) >> $LOG_FILE
 
-echo "ATTENTION: Open URL ${HOSTNAME}:$ACCESS_PORT} in Web browser to check how it works"
+echo "ATTENTION: Open URL http://${HOSTNAME}:${ACCESS_PORT} in Web browser to check how it works"
 
