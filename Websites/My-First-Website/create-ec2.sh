@@ -23,5 +23,5 @@ echo "*** Building $DOC_IMG_NAME docker image ..."
 echo "*** Starting container for  $DOC_IMG_NAME ..."
 ( docker run -d -p ${ACCESS_PORT}:80 $DOC_IMG_NAME ) >> $LOG_FILE
 
-echo "ATTENTION: Open URL http://${HOSTNAME}:${ACCESS_PORT} in Web browser to check how it works"
+echo "ATTENTION: Open URL http://<IPaddress4dockerHost>:${ACCESS_PORT} in Web browser to check how it works"
 
